@@ -1,0 +1,379 @@
+EMBEDDER   : text-embedding-3-small + file cache
+==============================================================================
+CHIẾN LƯỢC : fixed / FixedSizeChunker  {'chunk_size': 500, 'overlap': 50}
+CORPUS     : data\Bao_hanh
+ĐÃ NẠP     : 229 chunk từ 9 tài liệu
+ĐỘ DÀI CHUNK: trung bình 489 ký tự, min 51, max 500
+==============================================================================
+
+[1] Bảo hành sản phẩm thông qua Shopee mất bao lâu?
+    1. score=+0.6903  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Lưu ý: Chính sách này chỉ áp dụng cho cá...
+    2. score=+0.6836  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       Shopee Trường hợp quý khách gửi sản phẩm bảo hành về Shopee, chúng tôi sẽ gửi thông báo xá...
+    3. score=+0.6681  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       4. THỜI GIAN BẢO HÀNH: a. Bảo hành tại nhà sản xuất Sản phẩm cung cấp được đảm bảo hàng ch...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 1/2  (tìm thấy: 20 ngày đến 45 ngày)   <-- CHÊNH LỆCH, đây là phát hiện đáng viết vào báo cáo
+
+[2] Sản phẩm cần thỏa những điều kiện gì để được bảo hành miễn phí?
+    1. score=+0.6714  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       ược bảo hành hoặc phát sinh phí bảo hành: Vi phạm một trong những điều kiện bảo hành miễn ...
+    2. score=+0.6235  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       g bảo hành điện tử) Có hóa đơn điện tử (khi Người mua có yêu cầu) hoặc mã đơn hàng (ID đơn...
+    3. score=+0.6012  shopee-quy-che-hoat-dong-san  audience=both
+       nh sẽ chỉ được thực hiện theo Chính sách bảo hành đã được công bố của Người Bán và/hoặc Nh...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 0/2  (ngữ cảnh thiếu: lỗi kỹ thuật do nhà sản xuất)   <-- CHÊNH LỆCH, đây là phát hiện đáng viết vào báo cáo
+
+[3] Thời hạn gửi yêu cầu Trả hàng/Hoàn tiền với từng loại đơn hàng là bao lâu?
+    1. score=+0.6865  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       cầu tại Điều 4 dưới đây. 3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 1...
+    2. score=+0.6649  shopee-phuong-thuc-gui-hang-hoan-tra  audience=buyer
+       . Lưu ý khi chọn Hình thức Đơn vị vận chuyển đến lấy hàng: Đơn vị vận chuyển sẽ chỉ hỗ trợ...
+    3. score=+0.6610  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+       Sách Trả Hàng và Hoàn Tiền. 1.9. Thời hạn và điều kiện Người Mua tại Shopee Mall được phép...
+    chấm theo doc_id : 0/2
+    chấm theo nội dung: 0/2  (ngữ cảnh thiếu: 15 ngày)
+
+[4] Người bán được đăng bán hàng hóa còn bao nhiêu hạn sử dụng?
+    1. score=+0.6876  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       loại hàng hóa mà khi giao đi phải còn ít nhất 30% thời hạn sử dụng và còn ít nhất 30 ngày,...
+    2. score=+0.5798  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       ẨM 1. Danh sách các sản phẩm bắt buộc phải có hạn sử dụng trên bao bì a. Dược phẩm b. Hóa ...
+    3. score=+0.5489  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       n phẩm được xem như Người Bán đăng bán hàng hết hạn sử dụng, và sẽ bị xử lý theo quy định ...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 30% thời hạn sử dụng)
+
+[5] Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?
+    filter = {'audience': 'buyer'}
+    1. score=+0.6239  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       cầu tại Điều 4 dưới đây. 3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 1...
+    2. score=+0.5510  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       ếu nại Trả hàng/Hoàn tiền Với yêu cầu Trả hàng/Hoàn tiền cho các sản phẩm thuộc danh sách ...
+    3. score=+0.5499  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       Đối với các đơn hàng khác: 15 ngày kể từ lúc đơn hàng được cập nhật trạng thái ‘Giao hàng ...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 15 (mười lăm) ngày)
+
+==============================================================================
+TỔNG chấm theo doc_id  : 8/10   <- cách ngây thơ, thổi phồng
+TỔNG chấm theo nội dung: 5/10   <- cách đúng theo docs/SCORING.md
+==============================================================================
+
+### A/B FILTER — fixed — câu 5: Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?
+
+  [A] KHÔNG filter
+      1. score=+0.6239  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+         cầu tại Điều 4 dưới đây. 3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 1...
+      2. score=+0.5510  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         ếu nại Trả hàng/Hoàn tiền Với yêu cầu Trả hàng/Hoàn tiền cho các sản phẩm thuộc danh sách ...
+      3. score=+0.5499  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         Đối với các đơn hàng khác: 15 ngày kể từ lúc đơn hàng được cập nhật trạng thái ‘Giao hàng ...
+
+  [B] CÓ filter {'audience': 'buyer'} (buyer)
+      1. score=+0.6239  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+         cầu tại Điều 4 dưới đây. 3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 1...
+      2. score=+0.5510  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         ếu nại Trả hàng/Hoàn tiền Với yêu cầu Trả hàng/Hoàn tiền cho các sản phẩm thuộc danh sách ...
+      3. score=+0.5499  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         Đối với các đơn hàng khác: 15 ngày kể từ lúc đơn hàng được cập nhật trạng thái ‘Giao hàng ...
+      chuỗi đáp án thấy được: 15 (mười lăm) ngày
+
+  [C] CÓ filter {'audience': 'seller'} (seller)
+      1. score=+0.5335  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         ẩm tại Shopee Mall”) bằng cách nhấn vào nút “Yêu Cầu Trả Hàng/Hoàn Tiền” trên Trang Shopee...
+      2. score=+0.5307  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-ban  audience=seller
+         BÁN Khi nhận được yêu cầu trả hàng và/hoặc hoàn tiền từ phía Người Mua, Shopee sẽ xem xét ...
+      3. score=+0.5246  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         hopee trong từng thời điểm trong vòng 06 (sáu) ngày lịch kể từ ngày yêu cầu trả hàng/hoàn ...
+      chuỗi đáp án thấy được: 02 ngày lịch
+
+  Nhận xét: filter đổi tập top-k, dùng được làm ví dụ metadata_filter.
+==============================================================================
+CHIẾN LƯỢC : recursive / RecursiveChunker  {'separators': ['\n\n', '\n', '. ', ' ', ''], 'chunk_size': 400}
+CORPUS     : data\Bao_hanh
+ĐÃ NẠP     : 325 chunk từ 9 tài liệu
+ĐỘ DÀI CHUNK: trung bình 307 ký tự, min 23, max 400
+==============================================================================
+
+[1] Bảo hành sản phẩm thông qua Shopee mất bao lâu?
+    1. score=+0.7045  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       Sản phẩm cung cấp được đảm bảo hàng chính hãng nên Shopee khuyến khích quý khách gửi sản p...
+    2. score=+0.7015  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       Thời hạn bảo hành được tính kể từ ngày mua hàng hoặc ngày nhận được sản phẩm, tùy theo từn...
+    3. score=+0.6821  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       Trường hợp quý khách gửi sản phẩm bảo hành về Shopee, chúng tôi sẽ gửi thông báo xác nhận ...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 1/2  (tìm thấy: 20 ngày đến 45 ngày)   <-- CHÊNH LỆCH, đây là phát hiện đáng viết vào báo cáo
+
+[2] Sản phẩm cần thỏa những điều kiện gì để được bảo hành miễn phí?
+    1. score=+0.6122  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       Tất cả các trường hợp khách hàng báo lỗi với thông tin chưa rõ ràng hoặc chưa chắc chắn đề...
+    2. score=+0.6015  shopee-quy-che-hoat-dong-san  audience=both
+       Điều kiện bảo hành đối với hàng hóa Các điều kiện bảo hành được liệt kê dưới đây là các đi...
+    3. score=+0.6007  shopee-quy-che-hoat-dong-san  audience=both
+       Sản phẩm bị lỗi kỹ thuật không phải do lỗi của Người Mua Người Mua cần lưu ý về một số trư...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 0/2  (ngữ cảnh thiếu: lỗi kỹ thuật do nhà sản xuất)   <-- CHÊNH LỆCH, đây là phát hiện đáng viết vào báo cáo
+
+[3] Thời hạn gửi yêu cầu Trả hàng/Hoàn tiền với từng loại đơn hàng là bao lâu?
+    1. score=+0.7294  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 15 (mười lăm) ngày kể từ l...
+    2. score=+0.7017  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       Bạn vẫn có thể gửi yêu cầu Trả hàng/Hoàn tiền sau khi đã bấm nút ‘Đã nhận được hàng’ và vẫ...
+    3. score=+0.6640  shopee-phuong-thuc-gui-hang-hoan-tra  audience=buyer
+       # Các phương thức gửi hàng hoàn trả và phí hoàn trả 1. Hướng dẫn trả hàng sau khi yêu cầu ...
+    chấm theo doc_id : 1/2
+    chấm theo nội dung: 2/2  (tìm thấy: 15 ngày, 24 giờ)   <-- CHÊNH LỆCH, đây là phát hiện đáng viết vào báo cáo
+
+[4] Người bán được đăng bán hàng hóa còn bao nhiêu hạn sử dụng?
+    1. score=+0.6447  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       h. Các sản phẩm khác bắt buộc phải có hạn sử dụng theo quy định của Nghị định số 43/2017/N...
+    2. score=+0.5756  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       c. Hạn sử dụng của sản phẩm được ghi dưới dạng "sử dụng trước tháng/năm" sẽ được hiểu ngày...
+    3. score=+0.5681  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       b. Đối với mặt hàng thực phẩm, đặc biệt là thực phẩm có hạn sử dụng dưới 30 ngày, Người Bá...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 30% thời hạn sử dụng)
+
+[5] Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?
+    filter = {'audience': 'buyer'}
+    1. score=+0.6434  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 15 (mười lăm) ngày kể từ l...
+    2. score=+0.5835  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       Bạn vẫn có thể gửi yêu cầu Trả hàng/Hoàn tiền sau khi đã bấm nút ‘Đã nhận được hàng’ và vẫ...
+    3. score=+0.5525  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       Với yêu cầu Trả hàng/Hoàn tiền cho các sản phẩm thuộc danh sách hạn chế trả hàng, tùy vào ...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 15 (mười lăm) ngày)
+
+==============================================================================
+TỔNG chấm theo doc_id  : 9/10   <- cách ngây thơ, thổi phồng
+TỔNG chấm theo nội dung: 7/10   <- cách đúng theo docs/SCORING.md
+==============================================================================
+
+### A/B FILTER — recursive — câu 5: Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?
+
+  [A] KHÔNG filter
+      1. score=+0.6434  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+         3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 15 (mười lăm) ngày kể từ l...
+      2. score=+0.5845  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         cầu trả hàng/hoàn tiền:...
+      3. score=+0.5835  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         Bạn vẫn có thể gửi yêu cầu Trả hàng/Hoàn tiền sau khi đã bấm nút ‘Đã nhận được hàng’ và vẫ...
+
+  [B] CÓ filter {'audience': 'buyer'} (buyer)
+      1. score=+0.6434  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+         3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 15 (mười lăm) ngày kể từ l...
+      2. score=+0.5835  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         Bạn vẫn có thể gửi yêu cầu Trả hàng/Hoàn tiền sau khi đã bấm nút ‘Đã nhận được hàng’ và vẫ...
+      3. score=+0.5525  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         Với yêu cầu Trả hàng/Hoàn tiền cho các sản phẩm thuộc danh sách hạn chế trả hàng, tùy vào ...
+      chuỗi đáp án thấy được: 15 (mười lăm) ngày
+
+  [C] CÓ filter {'audience': 'seller'} (seller)
+      1. score=+0.5845  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         cầu trả hàng/hoàn tiền:...
+      2. score=+0.5691  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         a. Trong hầu hết các trường hợp, Shopee sẽ xử lý và đưa ra quyết định cuối cùng liên quan ...
+      3. score=+0.5309  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         Shopee có quyền từ chối bất kỳ Yêu Cầu Trả Hàng/Hoàn Tiền nào được hoàn thành sau Thời Gia...
+      chuỗi đáp án còn thiếu: 02 ngày lịch
+
+  Nhận xét: filter đổi tập top-k, dùng được làm ví dụ metadata_filter.
+==============================================================================
+CHIẾN LƯỢC : heading / HeadingChunker  {'max_chars': 800, 'heading_pattern': '^#{1,6}\\s+'}
+CORPUS     : data\Bao_hanh
+ĐÃ NẠP     : 167 chunk từ 9 tài liệu
+ĐỘ DÀI CHUNK: trung bình 642 ký tự, min 117, max 800
+==============================================================================
+
+[1] Bảo hành sản phẩm thông qua Shopee mất bao lâu?
+    1. score=+0.7236  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Trường hợp quý khách gửi sản phẩm bảo hà...
+    2. score=+0.7103  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Thời hạn bảo hành được tính kể từ ngày m...
+    3. score=+0.6990  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Trong trường hợp quý khách gặp khó khăn ...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 20 ngày đến 45 ngày)
+
+[2] Sản phẩm cần thỏa những điều kiện gì để được bảo hành miễn phí?
+    1. score=+0.6192  shopee-quy-che-hoat-dong-san  audience=both
+       # Quy chế hoạt động Sàn Thương mại điện tử Shopee.vn Các điều kiện bảo hành được liệt kê d...
+    2. score=+0.6031  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Lưu ý: Chính sách này chỉ áp dụng cho cá...
+    3. score=+0.5756  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Tất cả các trường hợp khách hàng báo lỗi...
+    chấm theo doc_id : 1/2
+    chấm theo nội dung: 1/2  (tìm thấy: lỗi kỹ thuật do nhà sản xuất)
+
+[3] Thời hạn gửi yêu cầu Trả hàng/Hoàn tiền với từng loại đơn hàng là bao lâu?
+    1. score=+0.6845  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) Sản Phẩm ở trạng thái nguyên vẹn v...
+    2. score=+0.6745  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       # Những quy định chung về Trả hàng/Hoàn tiền của Shopee 1. Điều kiện Trả hàng/Hoàn tiền củ...
+    3. score=+0.6726  shopee-phuong-thuc-gui-hang-hoan-tra  audience=buyer
+       # Các phương thức gửi hàng hoàn trả và phí hoàn trả Đơn vị vận chuyển sẽ chỉ hỗ trợ tối đa...
+    chấm theo doc_id : 1/2
+    chấm theo nội dung: 2/2  (tìm thấy: 15 ngày, 24 giờ)   <-- CHÊNH LỆCH, đây là phát hiện đáng viết vào báo cáo
+
+[4] Người bán được đăng bán hàng hóa còn bao nhiêu hạn sử dụng?
+    1. score=+0.6312  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       # Quy định về đăng bán sản phẩm trên Shopee h. Các sản phẩm khác bắt buộc phải có hạn sử d...
+    2. score=+0.5888  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       # Quy định về đăng bán sản phẩm trên Shopee b. Đối với mặt hàng thực phẩm, đặc biệt là thự...
+    3. score=+0.5028  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-ban  audience=seller
+       # Chính sách Trả hàng và Hoàn tiền (dành cho Người Bán) 8.2. Chính Sách Trả Hàng và Hoàn T...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 30% thời hạn sử dụng)
+
+[5] Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?
+    filter = {'audience': 'buyer'}
+    1. score=+0.5935  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) Sản Phẩm ở trạng thái nguyên vẹn v...
+    2. score=+0.5410  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       # Những quy định chung về Trả hàng/Hoàn tiền của Shopee + 20 ngày kể từ lúc đơn hàng được ...
+    3. score=+0.5356  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       # Những quy định chung về Trả hàng/Hoàn tiền của Shopee 1. Điều kiện Trả hàng/Hoàn tiền củ...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 15 (mười lăm) ngày)
+
+==============================================================================
+TỔNG chấm theo doc_id  : 8/10   <- cách ngây thơ, thổi phồng
+TỔNG chấm theo nội dung: 9/10   <- cách đúng theo docs/SCORING.md
+==============================================================================
+
+### A/B FILTER — heading — câu 5: Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?
+
+  [A] KHÔNG filter
+      1. score=+0.5935  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+         # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) Sản Phẩm ở trạng thái nguyên vẹn v...
+      2. score=+0.5410  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         # Những quy định chung về Trả hàng/Hoàn tiền của Shopee + 20 ngày kể từ lúc đơn hàng được ...
+      3. score=+0.5356  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         # Những quy định chung về Trả hàng/Hoàn tiền của Shopee 1. Điều kiện Trả hàng/Hoàn tiền củ...
+
+  [B] CÓ filter {'audience': 'buyer'} (buyer)
+      1. score=+0.5935  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+         # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) Sản Phẩm ở trạng thái nguyên vẹn v...
+      2. score=+0.5410  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         # Những quy định chung về Trả hàng/Hoàn tiền của Shopee + 20 ngày kể từ lúc đơn hàng được ...
+      3. score=+0.5356  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         # Những quy định chung về Trả hàng/Hoàn tiền của Shopee 1. Điều kiện Trả hàng/Hoàn tiền củ...
+      chuỗi đáp án thấy được: 15 (mười lăm) ngày
+
+  [C] CÓ filter {'audience': 'seller'} (seller)
+      1. score=+0.5148  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         # Điều khoản Dịch vụ của Shopee Mall Người Bán tại Shopee Mall có trách nhiệm cung cấp các...
+      2. score=+0.5077  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         # Điều khoản Dịch vụ của Shopee Mall 1.1. Người Mua tại Shopee Mall có thể yêu cầu hoàn lạ...
+      3. score=+0.4960  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-ban  audience=seller
+         # Chính sách Trả hàng và Hoàn tiền (dành cho Người Bán) Khi nhận được yêu cầu trả hàng và/...
+      chuỗi đáp án còn thiếu: 02 ngày lịch
+
+  Nhận xét: filter đổi tập top-k, dùng được làm ví dụ metadata_filter.
+==============================================================================
+CHIẾN LƯỢC : clause / ClauseChunker  {'max_chars': 400, 'min_chars': 80, 'clause_pattern': '^(?:\\d+(?:\\.\\d+)*\\.|[ivxlcdm]{2,}\\.|[a-z]\\.)\\s+', 'heading_pattern': '^#{1,6}\\s+'}
+CORPUS     : data\Bao_hanh
+ĐÃ NẠP     : 491 chunk từ 9 tài liệu
+ĐỘ DÀI CHUNK: trung bình 250 ký tự, min 41, max 400
+==============================================================================
+
+[1] Bảo hành sản phẩm thông qua Shopee mất bao lâu?
+    1. score=+0.7253  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Sản phẩm cung cấp được đảm bảo hàng chín...
+    2. score=+0.7214  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Thời gian bảo hành sản phẩm của quý khác...
+    3. score=+0.7119  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee quý khách...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 1/2  (tìm thấy: 20 ngày đến 45 ngày)   <-- CHÊNH LỆCH, đây là phát hiện đáng viết vào báo cáo
+
+[2] Sản phẩm cần thỏa những điều kiện gì để được bảo hành miễn phí?
+    1. score=+0.6246  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee 1. ĐIỀU KIỆN BẢO HÀNH:Sản phẩm được bảo ...
+    2. score=+0.6020  shopee-quy-che-hoat-dong-san  audience=both
+       # Quy chế hoạt động Sàn Thương mại điện tử Shopee.vn Các điều kiện bảo hành được liệt kê d...
+    3. score=+0.5858  shopee-chinh-sach-bao-hanh-san-pham  audience=buyer
+       # Chính sách bảo hành cho sản phẩm mua tại Shopee Những trường hợp không được bảo hành hoặ...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: lỗi kỹ thuật do nhà sản xuất)
+
+[3] Thời hạn gửi yêu cầu Trả hàng/Hoàn tiền với từng loại đơn hàng là bao lâu?
+    1. score=+0.7332  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) 3.2. Người Mua có thể gửi yêu cầu ...
+    2. score=+0.6748  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       # Những quy định chung về Trả hàng/Hoàn tiền của Shopee 1.2. Thời gian tối đa để gửi yêu c...
+    3. score=+0.6731  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) 4.2. Hạn mức Người Mua hợp lệ chỉ ...
+    chấm theo doc_id : 1/2
+    chấm theo nội dung: 0/2  (ngữ cảnh thiếu: 15 ngày)   <-- CHÊNH LỆCH, đây là phát hiện đáng viết vào báo cáo
+
+[4] Người bán được đăng bán hàng hóa còn bao nhiêu hạn sử dụng?
+    1. score=+0.6265  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       # Quy định về đăng bán sản phẩm trên Shopee a. Người Bán chỉ được phép bán các loại hàng h...
+    2. score=+0.5722  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       # Quy định về đăng bán sản phẩm trên Shopee c. Hạn sử dụng của sản phẩm được ghi dưới dạng...
+    3. score=+0.5486  shopee-quy-dinh-dang-ban-san-pham  audience=seller
+       # Quy định về đăng bán sản phẩm trên Shopee 2. Quy định về hạn sử dụng của sản phẩm chính...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 30% thời hạn sử dụng)
+
+[5] Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?
+    filter = {'audience': 'buyer'}
+    1. score=+0.6289  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+       # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) 3.2. Người Mua có thể gửi yêu cầu ...
+    2. score=+0.5642  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       # Những quy định chung về Trả hàng/Hoàn tiền của Shopee 1.2. Thời gian tối đa để gửi yêu c...
+    3. score=+0.5514  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+       # Những quy định chung về Trả hàng/Hoàn tiền của Shopee Bạn vẫn có thể gửi yêu cầu Trả hàn...
+    chấm theo doc_id : 2/2
+    chấm theo nội dung: 2/2  (tìm thấy: 15 (mười lăm) ngày)
+
+==============================================================================
+TỔNG chấm theo doc_id  : 9/10   <- cách ngây thơ, thổi phồng
+TỔNG chấm theo nội dung: 7/10   <- cách đúng theo docs/SCORING.md
+==============================================================================
+
+### A/B FILTER — clause — câu 5: Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?
+
+  [A] KHÔNG filter
+      1. score=+0.6289  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+         # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) 3.2. Người Mua có thể gửi yêu cầu ...
+      2. score=+0.5642  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         # Những quy định chung về Trả hàng/Hoàn tiền của Shopee 1.2. Thời gian tối đa để gửi yêu c...
+      3. score=+0.5611  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         # Điều khoản Dịch vụ của Shopee Mall vòng 06 (sáu) ngày lịch kể từ ngày yêu cầu trả hàng/h...
+
+  [B] CÓ filter {'audience': 'buyer'} (buyer)
+      1. score=+0.6289  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua  audience=buyer
+         # Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) 3.2. Người Mua có thể gửi yêu cầu ...
+      2. score=+0.5642  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         # Những quy định chung về Trả hàng/Hoàn tiền của Shopee 1.2. Thời gian tối đa để gửi yêu c...
+      3. score=+0.5514  shopee-quy-dinh-chung-tra-hang-hoan-tien  audience=buyer
+         # Những quy định chung về Trả hàng/Hoàn tiền của Shopee Bạn vẫn có thể gửi yêu cầu Trả hàn...
+      chuỗi đáp án thấy được: 15 (mười lăm) ngày
+
+  [C] CÓ filter {'audience': 'seller'} (seller)
+      1. score=+0.5611  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         # Điều khoản Dịch vụ của Shopee Mall vòng 06 (sáu) ngày lịch kể từ ngày yêu cầu trả hàng/h...
+      2. score=+0.5497  shopee-dieu-khoan-dich-vu-shopee-mall  audience=seller
+         # Điều khoản Dịch vụ của Shopee Mall a. Trong hầu hết các trường hợp, Shopee sẽ xử lý và đ...
+      3. score=+0.5120  shopee-chinh-sach-tra-hang-hoan-tien-nguoi-ban  audience=seller
+         # Chính sách Trả hàng và Hoàn tiền (dành cho Người Bán) Người Bán cần gửi phản hồi trong v...
+      chuỗi đáp án thấy được: 02 ngày lịch
+
+  Nhận xét: filter đổi tập top-k, dùng được làm ví dụ metadata_filter.
+
+==============================================================================
+BẢNG SO SÁNH CHIẾN LƯỢC
+| Chiến lược | Số chunk | Avg length | Doc-id score | Content score | A/B filter đổi top-k? |
+|---|---:|---:|---:|---:|---|
+| fixed | 229 | 489.2 | 8/10 | 5/10 | có |
+| recursive | 325 | 307.2 | 9/10 | 7/10 | có |
+| heading | 167 | 642.4 | 8/10 | 9/10 | có |
+| clause | 491 | 250.6 | 9/10 | 7/10 | có |
+==============================================================================
