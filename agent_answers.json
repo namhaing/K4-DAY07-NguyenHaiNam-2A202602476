@@ -1,0 +1,52 @@
+[
+ {
+  "id": 1,
+  "question": "Bảo hành sản phẩm thông qua Shopee mất bao lâu?",
+  "score": 0.7253,
+  "doc": "shopee-chinh-sach-bao-hanh-san-pham",
+  "aud": "buyer",
+  "top1": "# Chính sách bảo hành cho sản phẩm mua tại Shopee Sản phẩm cung cấp được đảm bảo hàng chính hãng nên Shopee khuyến khích quý khách gửi sản phẩm trực tiếp đến địa chỉ bảo ",
+  "relevant": true,
+  "answer": "Thời gian bảo hành sản phẩm thông qua Shopee dự kiến từ 20 ngày đến 45 ngày làm việc, tính từ lúc Shopee nhận được sản phẩm. Thời gian cụ thể có thể thay đổi tùy thuộc vào linh kiện cần thay thế và Shopee sẽ thông báo chi tiết đến quý khách sau khi có thông tin từ bên bảo hành [2]."
+ },
+ {
+  "id": 2,
+  "question": "Sản phẩm cần thỏa những điều kiện gì để được bảo hành miễn phí?",
+  "score": 0.6246,
+  "doc": "shopee-chinh-sach-bao-hanh-san-pham",
+  "aud": "buyer",
+  "top1": "# Chính sách bảo hành cho sản phẩm mua tại Shopee 1. ĐIỀU KIỆN BẢO HÀNH:Sản phẩm được bảo hành miễn phí nếu sản phẩm đó hội đủ các điều kiện sau: Sản phẩm bị lỗi kỹ thuật",
+  "relevant": true,
+  "answer": "Sản phẩm cần thỏa những điều kiện sau để được bảo hành miễn phí: 1. Sản phẩm bị lỗi kỹ thuật do nhà sản xuất. 2. Còn trong thời hạn bảo hành (theo phiếu bảo hành hoặc trên hệ thống bảo hành điện tử). 3. Có hóa đơn điện tử (nếu Người mua có yêu cầu) hoặc mã đơn hàng (ID đơn hàng) [1]."
+ },
+ {
+  "id": 3,
+  "question": "Thời hạn gửi yêu cầu Trả hàng/Hoàn tiền với từng loại đơn hàng là bao lâu?",
+  "score": 0.7332,
+  "doc": "shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua",
+  "aud": "buyer",
+  "top1": "# Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) 3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 15 (mười lăm) ngày kể từ lúc đơn hàng được cập nhậ",
+  "relevant": true,
+  "answer": "Thời hạn gửi yêu cầu Trả hàng/Hoàn tiền là khác nhau tùy thuộc vào loại đơn hàng: - Đối với các sản phẩm thông thường, Người Mua có thể gửi yêu cầu trong vòng 15 ngày kể từ lúc đơn hàng được cập nhật giao hàng thành công. - Đối với các sản phẩm là thực phẩm tươi sống và đông lạnh, yêu cầu phải được gửi trong vòng 24 giờ kể từ lúc đơn hàng được cập nhật giao hàng thành công [1][2]."
+ },
+ {
+  "id": 4,
+  "question": "Người bán được đăng bán hàng hóa còn bao nhiêu hạn sử dụng?",
+  "score": 0.6265,
+  "doc": "shopee-quy-dinh-dang-ban-san-pham",
+  "aud": "seller",
+  "top1": "# Quy định về đăng bán sản phẩm trên Shopee a. Người Bán chỉ được phép bán các loại hàng hóa mà khi giao đi phải còn ít nhất 30% thời hạn sử dụng và còn ít nhất 30 ngày, ",
+  "relevant": true,
+  "answer": "Người bán chỉ được phép bán các loại hàng hóa mà khi giao đi phải còn ít nhất 30% thời hạn sử dụng và còn ít nhất 30 ngày, tính từ thời điểm hiện tại đến ngày hết hạn [1]."
+ },
+ {
+  "id": 5,
+  "question": "Bên liên quan có bao nhiêu ngày để xử lý yêu cầu trả hàng/hoàn tiền?",
+  "score": 0.6289,
+  "doc": "shopee-chinh-sach-tra-hang-hoan-tien-nguoi-mua",
+  "aud": "buyer",
+  "top1": "# Chính sách Trả hàng và Hoàn tiền (dành cho Người Mua) 3.2. Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 15 (mười lăm) ngày kể từ lúc đơn hàng được cập nhậ",
+  "relevant": true,
+  "answer": "Bên liên quan có 6 ngày để xử lý yêu cầu trả hàng/hoàn tiền, theo Điều khoản Dịch vụ của Shopee Mall [3]."
+ }
+]

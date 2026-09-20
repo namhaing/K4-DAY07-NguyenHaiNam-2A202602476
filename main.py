@@ -4,7 +4,11 @@ import os
 import sys
 from pathlib import Path
 
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except ModuleNotFoundError:
+    def load_dotenv(*args, **kwargs) -> bool:
+        return False
 
 from src.agent import KnowledgeBaseAgent
 from src.embeddings import (
@@ -19,6 +23,11 @@ from src.embeddings import (
 )
 from src.models import Document
 from src.store import EmbeddingStore
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 SAMPLE_FILES = [
     "data/python_intro.txt",
